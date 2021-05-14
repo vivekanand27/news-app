@@ -1,18 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
-import bootstrap from 'bootstrap'
-
-import HomeScreen from './screens/HomeScreen'
+import React,{lazy, Suspense} from "react";
+import { Container } from 'react-bootstrap';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <HomeScreen />
-      </header>
-    </div>
-  );
+const HomeScreen = lazy(() => import("./screens/HomeScreen"));
+
+const App = () => {
+  return(
+    <Router>
+      <Suspense fallback={<div>Loading...</div>}>
+      {/* <Header /> */}
+      <main className="py-2">
+        <Container>          
+          <Route path='/' component={HomeScreen} exact/>
+        </Container>
+      </main>      
+      </Suspense>
+    </Router>);
 }
 
 export default App;
