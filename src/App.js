@@ -1,6 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
+import bootstrap from 'bootstrap'
+
 import HomeScreen from './screens/HomeScreen'
+
 
 function App() {
   return (
