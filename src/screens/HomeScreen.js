@@ -31,12 +31,12 @@ function HomeScreen() {
         return <div>Loading...</div>;
     } else {
         return (
-           <Row>
-               <Col xs={3}>
+           <Row style={{height:"100%"}}>
+               <Col xs={3} className="sidebar-container">
                     <Sidebar />
                </Col>
                
-               <Col xs={9}>
+               <Col xs={9} className="main-container">
                    <Row>
                         {items.map(item => (
                             <Col xs={4} sm={4} md={4} lg={4} xl={3}>
