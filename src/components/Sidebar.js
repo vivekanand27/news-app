@@ -4,10 +4,16 @@ import { Row, Col } from 'react-bootstrap'
 import "../App.css";
 
 function Sidebar() {
+
+  let showFeedback = false;
    
     useEffect(() => {
        
     }, [])
+
+  const showFeedbackFunction = () => {
+    showFeedback = !showFeedback;
+  }
 
     
         return (
@@ -16,7 +22,7 @@ function Sidebar() {
              Hi
                </Col>
                <Col xs={12}>
-               <button>We are listening</button>
+               <button onClick={showFeedbackFunction()}>We are listening</button>
                </Col>
            </Row>
                 

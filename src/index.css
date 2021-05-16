@@ -21,3 +21,17 @@ code {
   overflow: auto;
   padding: 1rem;
 }
+
+.feedback-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 24%;
+  background: #E9F0F5;
+  z-index: 2;
+  box-shadow: 4px 0 4px 1px rgb(0 0 0 / 20%);
+  border-radius: 0 10px 10px 0;
+  padding: 2rem 1rem;
+  width: 50%;
+  overflow: auto;
+}
