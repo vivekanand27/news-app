@@ -3,13 +3,10 @@ import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const News = ({ news }) => {
-    
-
-    
    
     return (
         <Card>           
-                <Card.Img src={news.image} variant="top" alt={news.title} />          
+                <Card.Img src={news.image} variant="top" alt="Image Not Available" />          
             <Card.Body>
                 <Link to={`/product/${news.title}`}>
                     <Card.Title as='div'>

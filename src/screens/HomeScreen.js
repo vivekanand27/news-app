@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Col } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 import axios from 'axios'
 
 import "../App.css";
@@ -33,13 +33,17 @@ function HomeScreen() {
         return <div>Loading...</div>;
     } else {
         return (
-            <ul>
-                {items.map(item => (
+           <Row>
+               <Col  xs={4} sm={4} md={4} lg={4} xl={3}>
+               {items.map(item => (
                     <li key={item.id}>
                         <News news={item} />
                     </li>
                 ))}
-            </ul>
+               </Col>
+           </Row>
+                
+         
         );
     }
 
