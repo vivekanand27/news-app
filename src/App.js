@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 
 const HomeScreen = lazy(() => import("./screens/HomeScreen"));
+const FeedbackScreen = lazy(() => import("./screens/FeedbackScreen"));
 
 const App = () => {
   return(
@@ -11,8 +12,9 @@ const App = () => {
       <Suspense fallback={<div>Loading...</div>}>
       {/* <Header /> */}
       <main className="py-2">
-        <Container>          
-          <Route path='/' component={HomeScreen} exact/>
+        <Container>       
+          <Route path='/feedback' component={FeedbackScreen}/>   
+          <Route path='/' component={HomeScreen} exact/>     
         </Container>
       </main>      
       </Suspense>

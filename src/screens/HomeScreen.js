@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Row, Col } from 'react-bootstrap'
-import axios from 'axios'
 
 import "../App.css";
 import News from '../components/News'
-const api = "https://api.first.org/data/v1/news";
 
 function HomeScreen() {
     const [error, setError] = useState(null);
