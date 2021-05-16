@@ -39,7 +39,6 @@
 
 main>.container {
   background-color: #E9F0F5;
-  padding: 3rem;
   border-radius: 10px;
   height: calc(100vh - 1rem);
   overflow: hidden;
