@@ -35,13 +35,19 @@ function HomeScreen() {
                <Col xs={3}>
                     <Sidebar />
                </Col>
-               <Col  xs={4} sm={4} md={4} lg={4} xl={3}>
-               {items.map(item => (
-                    <li key={item.id}>
-                        <News news={item} />
-                    </li>
-                ))}
+               
+               <Col xs={9}>
+                   <Row>
+                        {items.map(item => (
+                            <Col xs={4} sm={4} md={4} lg={4} xl={3}>
+                                <li key={item.id}>
+                                    <News news={item} />
+                                </li>
+                            </Col>
+                        ))}
+                   </Row>
                </Col>
+               
            </Row>
                 
          
